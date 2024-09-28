@@ -45,9 +45,9 @@ const SignInForm = () => {
   }, [session]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">Sign In</h1>
+    <div className="flex items-center justify-center min-h-screen bg-background">
+      <div className="bg-white p-8 rounded-lg w-full max-w-md">
+        <h1 className="text-2xl font-bold text-text mb-6 text-center">Sign In</h1>
         <div className="flex flex-col gap-4">
           <input
             type="text"
@@ -65,20 +65,20 @@ const SignInForm = () => {
           />
           <button
             onClick={handleSubmit}
-            className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600"
+            className="w-full bg-primary text-white p-3 rounded-lg hover:bg-accent"
           >
             Sign in
           </button>
           <button
             onClick={handleGoogleSignIn}
-            className="w-full bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 flex items-center justify-center gap-2"
+            className="w-full bg-text text-white p-3 rounded-lg hover:bg-gray-500 flex items-center justify-center gap-2"
           >
             <FaGoogle />
             Sign in with Google
           </button>
           <button
             onClick={handleRegister}
-            className="w-full border border-blue-500 text-blue-500 p-3 rounded-lg hover:bg-blue-50"
+            className="w-full text-primary p-3 rounded-lg hover:bg-blue-50"
           >
             No account? Create one
           </button>

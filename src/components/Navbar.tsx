@@ -1,21 +1,24 @@
-"use client"
-import React from 'react'
-import Link from 'next/link'
-import { useSession, signOut } from 'next-auth/react'
+"use client";
+import React from "react";
+import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
 
   const handleLogout = () => {
-    signOut()
-  }
+    signOut();
+  };
 
   return (
-    <div className="flex justify-between items-center p-4 bg-gray-800 text-white">
-      <Link href="/">
-        <img src="/path/to/logo.png" alt="Logo" className="h-8 w-8 cursor-pointer" />
+    <div className="flex justify-between items-center m-4 bg-white text-text">
+      <Link href="/bicycles">
+        <img src="/rebike.svg" alt="Logo" className="h-8 w-8 cursor-pointer" />
       </Link>
-      <span className="text-lg font-bold">Website</span>
+      <div className="absolute left-1/2 transform -translate-x-1/2 text-3xl font-bold">
+        <span className="text-primary">re</span>
+        <span className="text-accent">Bike</span>
+      </div>
       {session ? (
         <button
           onClick={handleLogout}
@@ -25,13 +28,13 @@ const Navbar = () => {
         </button>
       ) : (
         <Link href="/auth/login">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded">
             Login
           </button>
         </Link>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

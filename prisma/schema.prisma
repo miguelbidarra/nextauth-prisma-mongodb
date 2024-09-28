@@ -6,7 +6,16 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
- 
+
+model Bicycle {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  image       String
+  gears       String
+  wheelSize   String
+  frameSize   String
+}
+
 model User {
   id            String          @id @default(auto()) @map("_id") @db.ObjectId
   name          String?

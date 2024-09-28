@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#0eb4bd",
+        secondary: "#d3e9ff",
+        accent: "#92d400",
+        text: "#4d4c5f",
+        background: "#fefefe",
+      },
+      fontFamily: {
+        poppins: ['"Poppins"', "sans-serif"],
       },
     },
   },
